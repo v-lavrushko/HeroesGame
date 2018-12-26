@@ -6,10 +6,10 @@ public class Elf extends Character{
     @Override
     public void kick(Character c){
         super.kick(c);
-        if (c.power < this.power) {
-            c.hp = 0;
+        if (c.getPower() < this.getPower()) {
+            c.decreaseHp(c.getHp());
         } else {
-            c.power--;
+            c.decreasePower(1);
         }
     }
 }

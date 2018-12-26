@@ -6,6 +6,6 @@ public class Knight extends Character {
     @Override
     public void kick(Character c) {
         super.kick(c);
-        c.hp -= (int) (Math.random() * this.power);
+        c.decreaseHp((int) (Math.random() * this.getPower()));
     }
 }
